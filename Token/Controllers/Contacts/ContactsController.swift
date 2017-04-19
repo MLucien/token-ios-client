@@ -27,8 +27,6 @@ public extension Array {
 
 open class ContactsController: SweetTableController {
 
-    let selectedContactKey = "SelectedContact"
-
     lazy var mappings: YapDatabaseViewMappings = {
         let mappings = YapDatabaseViewMappings(groups: [TokenContact.collectionKey], view: TokenContact.viewExtensionName)
         mappings.setIsReversed(true, forGroup: TokenContact.collectionKey)
@@ -116,7 +114,7 @@ open class ContactsController: SweetTableController {
 
         self.displayContacts()
 
-        if let address = UserDefaults.standard.string(forKey: self.selectedContactKey) {
+        if let address = UserDefaults.standard.string(forKey: ContactsNavigationController.selectedContactKey) {
             // This doesn't restore a contact if they are not our contact, but a search result
             DispatchQueue.main.asyncAfter(seconds: 0.0) {
                 guard let contact = self.contact(withAddress: address) else { return }
@@ -347,8 +345,6 @@ extension ContactsController: UITableViewDelegate {
             let contactController = ContactController(contact: contact, idAPIClient: self.idAPIClient)
             self.navigationController?.pushViewController(contactController, animated: true)
         }
-
-        UserDefaults.standard.setValue(contact.address, forKey: self.selectedContactKey)
     }
 }
 

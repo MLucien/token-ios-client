@@ -17,6 +17,8 @@ import UIKit
 
 public class ContactsNavigationController: UINavigationController {
 
+    public static let selectedContactKey = "SelectedContact"
+
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -36,7 +38,26 @@ public class ContactsNavigationController: UINavigationController {
         fatalError("")
     }
 
-    public override func viewDidLoad() {
-        super.viewDidLoad()
+    public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        super.pushViewController(viewController, animated: animated)
+
+        if let viewController = viewController as? ContactController {
+            UserDefaults.standard.setValue(viewController.contact.address, forKey: ContactsNavigationController.selectedContactKey)
+        }
+    }
+
+    public override func popViewController(animated: Bool) -> UIViewController? {
+        UserDefaults.standard.removeObject(forKey: ContactsNavigationController.selectedContactKey)
+        return super.popViewController(animated: animated)
+    }
+
+    public override func popToRootViewController(animated: Bool) -> [UIViewController]? {
+        UserDefaults.standard.removeObject(forKey: ContactsNavigationController.selectedContactKey)
+        return super.popToRootViewController(animated: animated)
+    }
+
+    public override func popToViewController(_ viewController: UIViewController, animated: Bool) -> [UIViewController]? {
+        UserDefaults.standard.removeObject(forKey: ContactsNavigationController.selectedContactKey)
+        return super.popToViewController(viewController, animated: animated)
     }
 }
