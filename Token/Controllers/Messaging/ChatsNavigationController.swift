@@ -15,7 +15,7 @@
 
 import UIKit
 
-public class MessagingNavigationController: UINavigationController {
+public class ChatsNavigationController: UINavigationController {
 
     let selectedThreadAddressKey = "SelectedThread"
 
@@ -58,7 +58,7 @@ public class MessagingNavigationController: UINavigationController {
         guard let chatsController = self.viewControllers.first as? ChatsController else { fatalError() }
 
         let thread = chatsController.thread(withAddress: address)
-        let messagesController = MessagesViewController(thread: thread, chatAPIClient: chatsController.chatAPIClient)
+        let messagesController = ChatController(thread: thread, chatAPIClient: chatsController.chatAPIClient)
 
         self.pushViewController(messagesController, animated: false)
     }
@@ -68,14 +68,14 @@ public class MessagingNavigationController: UINavigationController {
         guard let chatsController = self.viewControllers.first as? ChatsController else { fatalError() }
         guard let thread = chatsController.thread(withIdentifier: identifier) else { return }
 
-        let messagesController = MessagesViewController(thread: thread, chatAPIClient: chatsController.chatAPIClient)
+        let messagesController = ChatController(thread: thread, chatAPIClient: chatsController.chatAPIClient)
         self.pushViewController(messagesController, animated: animated)
     }
 
     public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         super.pushViewController(viewController, animated: animated)
 
-        if let viewController = viewController as? MessagesViewController {
+        if let viewController = viewController as? ChatController {
             UserDefaults.standard.setValue(viewController.thread.contactIdentifier(), forKey: self.selectedThreadAddressKey)
         }
     }

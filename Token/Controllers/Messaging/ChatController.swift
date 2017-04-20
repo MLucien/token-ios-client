@@ -19,7 +19,7 @@ import NoChat
 import MobileCoreServices
 import ImagePicker
 
-class MessagesViewController: MessagesCollectionViewController {
+class ChatController: MessagesCollectionViewController {
 
     let etherAPIClient = EthereumAPIClient.shared
     let idAPIClient = IDAPIClient.shared
@@ -97,8 +97,8 @@ class MessagesViewController: MessagesCollectionViewController {
 
     var storageManager: TSStorageManager
 
-    lazy var ethereumPromptView: MessagesFloatingView = {
-        let view = MessagesFloatingView(withAutoLayout: true)
+    lazy var ethereumPromptView: ChatsFloatingHeaderView = {
+        let view = ChatsFloatingHeaderView(withAutoLayout: true)
         view.delegate = self
 
         return view
@@ -155,7 +155,7 @@ class MessagesViewController: MessagesCollectionViewController {
         self.containerView?.backgroundColor = nil
 
         self.view.addSubview(self.ethereumPromptView)
-        self.ethereumPromptView.heightAnchor.constraint(equalToConstant: MessagesFloatingView.height).isActive = true
+        self.ethereumPromptView.heightAnchor.constraint(equalToConstant: ChatsFloatingHeaderView.height).isActive = true
         self.ethereumPromptView.topAnchor.constraint(equalTo: self.topLayoutGuide.bottomAnchor).isActive = true
         self.ethereumPromptView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         self.ethereumPromptView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
@@ -590,7 +590,7 @@ class MessagesViewController: MessagesCollectionViewController {
     }
 }
 
-extension MessagesViewController: ActionableCellDelegate {
+extension ChatController: ActionableCellDelegate {
 
     func didTapRejectButton(_ messageCell: ActionableMessageCell) {
         guard let indexPath = self.collectionView.indexPath(for: messageCell) else { return }
@@ -658,7 +658,7 @@ extension MessagesViewController: ActionableCellDelegate {
     }
 }
 
-extension MessagesViewController: ChatInputTextPanelDelegate {
+extension ChatController: ChatInputTextPanelDelegate {
 
     func inputTextPanel(_: ChatInputTextPanel, requestSendText text: String) {
         let wrapper = SofaMessage(content: ["body": text])
@@ -677,7 +677,7 @@ extension MessagesViewController: ChatInputTextPanelDelegate {
     }
 }
 
-extension MessagesViewController: RateUserControllerDelegate {
+extension ChatController: RateUserControllerDelegate {
     func didRate(_ user: TokenContact, rating: Int, review: String) {
         self.dismiss(animated: true) {
             let ratingsClient = RatingsClient.shared
@@ -686,7 +686,7 @@ extension MessagesViewController: RateUserControllerDelegate {
     }
 }
 
-extension MessagesViewController: ImagePickerDelegate {
+extension ChatController: ImagePickerDelegate {
     func wrapperDidPress(_: ImagePickerController, images _: [UIImage]) {
         print("ok")
     }
@@ -713,16 +713,16 @@ extension MessagesViewController: ImagePickerDelegate {
     }
 }
 
-extension MessagesViewController: MessagesFloatingViewDelegate {
+extension ChatController: ChatsFloatingHeaderViewDelegate {
 
-    func messagesFloatingView(_: MessagesFloatingView, didPressRequestButton _: UIButton) {
+    func messagesFloatingView(_: ChatsFloatingHeaderView, didPressRequestButton _: UIButton) {
         let paymentRequestController = PaymentRequestController()
         paymentRequestController.delegate = self
 
         present(paymentRequestController, animated: true)
     }
 
-    func messagesFloatingView(_: MessagesFloatingView, didPressPayButton _: UIButton) {
+    func messagesFloatingView(_: ChatsFloatingHeaderView, didPressPayButton _: UIButton) {
         let paymentSendController = PaymentSendController()
         paymentSendController.delegate = self
 
@@ -730,7 +730,7 @@ extension MessagesViewController: MessagesFloatingViewDelegate {
     }
 }
 
-extension MessagesViewController: PaymentSendControllerDelegate {
+extension ChatController: PaymentSendControllerDelegate {
 
     func paymentSendControllerDidFinish(valueInWei: NSDecimalNumber?) {
         defer {
@@ -770,7 +770,7 @@ extension MessagesViewController: PaymentSendControllerDelegate {
     }
 }
 
-extension MessagesViewController: PaymentRequestControllerDelegate {
+extension ChatController: PaymentRequestControllerDelegate {
 
     func paymentRequestControllerDidFinish(valueInWei: NSDecimalNumber?) {
         defer {

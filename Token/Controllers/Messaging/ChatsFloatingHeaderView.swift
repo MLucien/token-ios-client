@@ -16,13 +16,13 @@
 import UIKit
 import SweetUIKit
 
-protocol MessagesFloatingViewDelegate: class {
-    func messagesFloatingView(_ messagesFloatingView: MessagesFloatingView, didPressRequestButton button: UIButton)
-    func messagesFloatingView(_ messagesFloatingView: MessagesFloatingView, didPressPayButton button: UIButton)
+protocol ChatsFloatingHeaderViewDelegate: class {
+    func messagesFloatingView(_ messagesFloatingView: ChatsFloatingHeaderView, didPressRequestButton button: UIButton)
+    func messagesFloatingView(_ messagesFloatingView: ChatsFloatingHeaderView, didPressPayButton button: UIButton)
 }
 
-class MessagesFloatingView: UIView {
-    weak var delegate: MessagesFloatingViewDelegate?
+class ChatsFloatingHeaderView: UIView {
+    weak var delegate: ChatsFloatingHeaderViewDelegate?
 
     static let height = CGFloat(48)
 
@@ -43,7 +43,7 @@ class MessagesFloatingView: UIView {
     }
 
     lazy var requestButton: UIButton = {
-        let button = MessagesFloatingView.button()
+        let button = ChatsFloatingHeaderView.button()
         button.setTitle("Request", for: .normal)
         button.addTarget(self, action: #selector(request(button:)), for: .touchUpInside)
 
@@ -51,7 +51,7 @@ class MessagesFloatingView: UIView {
     }()
 
     lazy var payButton: UIButton = {
-        let button = MessagesFloatingView.button()
+        let button = ChatsFloatingHeaderView.button()
         button.setTitle("Pay", for: .normal)
         button.addTarget(self, action: #selector(pay(button:)), for: .touchUpInside)
 

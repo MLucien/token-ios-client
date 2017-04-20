@@ -198,8 +198,8 @@ extension ChatsController: UITableViewDelegate {
 
     open func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         let thread = self.thread(at: indexPath)
-        let messagesController = MessagesViewController(thread: thread, chatAPIClient: self.chatAPIClient)
-        self.navigationController?.pushViewController(messagesController, animated: true)
+        let chatController = ChatController(thread: thread, chatAPIClient: self.chatAPIClient)
+        self.navigationController?.pushViewController(chatController, animated: true)
     }
 }
 
