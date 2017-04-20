@@ -161,15 +161,12 @@ class ChatInputTextPanel: NOCChatInputPanel {
 
     func send(_: ActionButton) {
         // Resign and become first responder to accept auto-correct suggestions
-        UIView.performWithoutAnimation {
-            // by making another UITextField the first responder, the keyboard won't try to hide
-            let temp = UITextField()
-            temp.isHidden = true
-            self.superview!.addSubview(temp)
-            temp.becomeFirstResponder()
-            self.inputField.internalTextView.becomeFirstResponder()
-            temp.removeFromSuperview()
-        }
+        let temp = UITextField()
+        temp.isHidden = true
+        self.superview!.addSubview(temp)
+        temp.becomeFirstResponder()
+        self.inputField.internalTextView.becomeFirstResponder()
+        temp.removeFromSuperview()
 
         guard let text = self.inputField.text, text.characters.count > 0 else { return }
 
