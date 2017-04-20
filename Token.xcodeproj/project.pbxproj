@@ -725,6 +725,8 @@
 			children = (
 				9FCDBADC1E28E57100A70E07 /* User.swift */,
 				9FCDBAF41E2CDDB100A70E07 /* TokenContact.swift */,
+				9FC72A421E252CFA00EF1141 /* ContactsManager.h */,
+				9FC72A431E252CFA00EF1141 /* ContactsManager.m */,
 			);
 			name = Users;
 			sourceTree = "<group>";
@@ -886,8 +888,6 @@
 				9FCDBAD31E27DE8800A70E07 /* Yap.swift */,
 				9FC72A381E25145D00EF1141 /* CryptoTools.h */,
 				9FC72A391E25145D00EF1141 /* CryptoTools.m */,
-				9FC72A421E252CFA00EF1141 /* ContactsManager.h */,
-				9FC72A431E252CFA00EF1141 /* ContactsManager.m */,
 				9F844BD61E30D8DE001C5498 /* DateTimeFormatter.swift */,
 				9FB8EA461E323B4000505441 /* SofaWrapper.swift */,
 				9F7E5DA11E4C982300543296 /* Message.swift */,
