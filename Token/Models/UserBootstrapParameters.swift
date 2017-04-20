@@ -16,10 +16,22 @@
 import Foundation
 import SweetFoundation
 
-let DeviceSpecificPassword = "1231231"
-
 /// Prepares user keys and data, signs and formats it properly as JSON to bootstrap a chat user.
 public class UserBootstrapParameter {
+    private lazy var DeviceSpecificPassword: String = {
+        let deviceSpecificPasswordKey = "DeviceSpecificPassword"
+        let uuid: String
+
+        if let storedUUID = Yap.sharedInstance.retrieveObject(for: deviceSpecificPasswordKey) as? String {
+            uuid = storedUUID
+        } else {
+            uuid = UUID().uuidString
+            Yap.sharedInstance.insert(object: uuid, for: deviceSpecificPasswordKey)
+        }
+
+        return uuid
+    }()
+
     public let identityKey: String
 
     public let lastResortPreKey: PreKeyRecord
