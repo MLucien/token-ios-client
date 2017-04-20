@@ -160,6 +160,10 @@ class ChatInputTextPanel: NOCChatInputPanel {
     }
 
     func send(_: ActionButton) {
+        // Resign and become first responder to accept auto-correct suggestions
+        self.inputField.internalTextView.resignFirstResponder()
+        self.inputField.internalTextView.becomeFirstResponder()
+        
         guard let text = self.inputField.text, text.characters.count > 0 else { return }
 
         let string = text.trimmingCharacters(in: .whitespacesAndNewlines)
