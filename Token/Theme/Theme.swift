@@ -53,11 +53,15 @@ extension Theme {
     }
 
     public static var tintColor: UIColor {
-        return UIColor(hex: "00C365")
+        return UIColor(hex: "01C236")
     }
 
     public static var viewBackgroundColor: UIColor {
         return .white
+    }
+
+    public static var unselectedItemTintColor: UIColor {
+        return UIColor(hex: "B1B4B8")
     }
 
     public static var messageViewBackgroundColor: UIColor {

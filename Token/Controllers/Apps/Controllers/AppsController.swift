@@ -102,7 +102,7 @@ class AppsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Apps"
+        self.title = "Browse"
 
         self.view.addSubview(self.searchResultsView)
         self.searchResultsView.fillSuperview()

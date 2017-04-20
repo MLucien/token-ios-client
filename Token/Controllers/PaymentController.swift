@@ -85,7 +85,7 @@ class PaymentController: UIViewController {
 
         self.view.backgroundColor = Theme.viewBackgroundColor
 
-        self.setupSubviewsAndConstraints()
+        self.addSubviewsAndConstraints()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -100,7 +100,7 @@ class PaymentController: UIViewController {
         self.shadowTextField.resignFirstResponder()
     }
 
-    func setupSubviewsAndConstraints() {
+    func addSubviewsAndConstraints() {
         self.view.addSubview(self.shadowTextField)
         self.view.addSubview(self.currencyAmountLabel)
         self.view.addSubview(self.etherAmountLabel)

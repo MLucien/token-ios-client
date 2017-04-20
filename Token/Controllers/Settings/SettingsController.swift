@@ -47,7 +47,7 @@ open class SettingsController: SweetTableController {
         self.chatAPIClient = chatAPIClient
 
         super.init(style: .grouped)
-        self.title = "Settings"
+        self.title = "Me"
 
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateVerificationStatus(_:)), name: SettingsController.verificationStatusChanged, object: nil)
     }

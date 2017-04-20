@@ -30,7 +30,7 @@ public class MessagingNavigationController: UINavigationController {
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 
-        self.tabBarItem = UITabBarItem(title: "Messages", image: #imageLiteral(resourceName: "messages"), tag: 0)
+        self.tabBarItem = UITabBarItem(title: "Chats", image: #imageLiteral(resourceName: "messages"), tag: 0)
         self.tabBarItem.titlePositionAdjustment.vertical = TabBarItemTitleOffset
     }
 

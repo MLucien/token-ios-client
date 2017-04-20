@@ -17,7 +17,6 @@ import UIKit
 import SweetUIKit
 import SweetFoundation
 import SweetSwift
-import CameraScanner
 
 public extension Array {
     public var any: Element? {
@@ -50,20 +49,6 @@ open class ContactsController: SweetTableController {
 
     var searchContacts = [TokenContact]()
 
-    lazy var scannerController: ScannerViewController = {
-        let controller = ScannerViewController(instructions: "Scan a user profile QR code", types: [.qrCode])
-
-        controller.delegate = self
-
-        return controller
-    }()
-
-    lazy var scanContactButton: UIBarButtonItem = {
-        let item = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(didTapScanContactButton))
-
-        return item
-    }()
-
     lazy var searchController: UISearchController = {
         let controller = UISearchController(searchResultsController: nil)
         controller.searchResultsUpdater = self
@@ -88,7 +73,7 @@ open class ContactsController: SweetTableController {
             self.mappings.update(with: transaction)
         }
 
-        self.title = "Contacts"
+        self.title = "Favorites"
 
         self.registerNotifications()
     }
@@ -134,7 +119,6 @@ open class ContactsController: SweetTableController {
 
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.rightBarButtonItem = self.scanContactButton
     }
 
     open override func viewDidAppear(_ animated: Bool) {
@@ -188,12 +172,6 @@ open class ContactsController: SweetTableController {
     func displayContacts() {
         self.searchController.isActive = false
         self.tableView.reloadData()
-    }
-
-    func didTapScanContactButton() {
-        _ = self.scannerController.view
-        self.scannerController.toolbar.setItems([self.scannerController.cancelItem], animated: true)
-        self.present(self.scannerController, animated: true)
     }
 
     func registerNotifications() {
@@ -349,33 +327,6 @@ extension ContactsController: UITableViewDelegate {
         }
 
         UserDefaults.standard.setValue(contact.address, forKey: self.selectedContactKey)
-    }
-}
-
-extension ContactsController: ScannerViewControllerDelegate {
-
-    public func scannerViewControllerDidCancel(_: ScannerViewController) {
-        self.dismiss(animated: true)
-    }
-
-    public func scannerViewController(_ controller: ScannerViewController, didScanResult result: String) {
-        let username = result.replacingOccurrences(of: QRCodeController.addUsernameBasePath, with: "")
-        let contactName = TokenContact.name(from: username)
-        self.idAPIClient.findContact(name: contactName) { contact in
-            guard let contact = contact else {
-                controller.startScanning()
-
-                return
-            }
-
-            SoundPlayer.playSound(type: .scanned)
-
-            self.dismiss(animated: true) {
-                let contactController = ContactController(contact: contact, idAPIClient: self.idAPIClient)
-
-                self.navigationController?.pushViewController(contactController, animated: true)
-            }
-        }
     }
 }
 
