@@ -31,7 +31,7 @@
 		149F9A681E72E29A00FB74AA /* BaseConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE4A6D1E4CC04300126217 /* BaseConverter.swift */; };
 		149F9A691E72E29A00FB74AA /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91F7FA51E71B25E00A076A6 /* SettingsCell.swift */; };
 		149F9A6A1E72E29A00FB74AA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E5DA11E4C982300543296 /* Message.swift */; };
-		149F9A6B1E72E29A00FB74AA /* AppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED3ABC1E4A2B3400DF8079 /* AppsController.swift */; };
+		149F9A6B1E72E29A00FB74AA /* BrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED3ABC1E4A2B3400DF8079 /* BrowseController.swift */; };
 		149F9A6C1E72E29A00FB74AA /* TGBaseMessageCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F40F3BC1E59FE97007A7DE7 /* TGBaseMessageCellLayout.swift */; };
 		149F9A6D1E72E29A00FB74AA /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147513691E49D41200E44A62 /* HomeNavigationController.swift */; };
 		149F9A6E1E72E29A00FB74AA /* ReputationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140041891E71588A00C1FD87 /* ReputationView.swift */; };
@@ -65,7 +65,7 @@
 		149F9A8B1E72E29A00FB74AA /* SearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143586FF1E5C4CB4007A268A /* SearchResultsView.swift */; };
 		149F9A8C1E72E29A00FB74AA /* ContactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAACCB21E30E1EE00FB871D /* ContactsNavigationController.swift */; };
 		149F9A8D1E72E29A00FB74AA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBAE91E28FD5C00A70E07 /* Theme.swift */; };
-		149F9A8E1E72E29A00FB74AA /* AppsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED3ABE1E4A347400DF8079 /* AppsNavigationController.swift */; };
+		149F9A8E1E72E29A00FB74AA /* BrowseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED3ABE1E4A347400DF8079 /* BrowseNavigationController.swift */; };
 		149F9A8F1E72E29A00FB74AA /* TGDeliveryStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F40F3BE1E59FE97007A7DE7 /* TGDeliveryStatusView.swift */; };
 		149F9A901E72E29A00FB74AA /* CryptoTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC72A391E25145D00EF1141 /* CryptoTools.m */; };
 		149F9A921E72E29A00FB74AA /* ChatAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC72A3C1E251ACC00EF1141 /* ChatAPIClient.swift */; };
@@ -141,8 +141,8 @@
 		149F9AE51E72E29A00FB74AA /* SF-UI-Text-Ultrathin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FAACCEF1E31120600FB871D /* SF-UI-Text-Ultrathin.otf */; };
 		14A769E11E72EC70007B4C1A /* DistributionTokenURLPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4D8D11E72CB7500389DF9 /* DistributionTokenURLPaths.swift */; };
 		14E4D8D01E72CB6E00389DF9 /* DevelopmentTokenURLPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E4D8CF1E72CB6E00389DF9 /* DevelopmentTokenURLPaths.swift */; };
-		14ED3ABD1E4A2B3400DF8079 /* AppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED3ABC1E4A2B3400DF8079 /* AppsController.swift */; };
-		14ED3ABF1E4A347400DF8079 /* AppsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED3ABE1E4A347400DF8079 /* AppsNavigationController.swift */; };
+		14ED3ABD1E4A2B3400DF8079 /* BrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED3ABC1E4A2B3400DF8079 /* BrowseController.swift */; };
+		14ED3ABF1E4A347400DF8079 /* BrowseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED3ABE1E4A347400DF8079 /* BrowseNavigationController.swift */; };
 		14EE6B4D1E72E54A000B07DA /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F8D1C71E72B4AA003F5749 /* Checkbox.swift */; };
 		79C8B9332AAF618B6185BC82 /* libPods-CocoaPods-Development.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A763C19118469E7169C9F72 /* libPods-CocoaPods-Development.a */; };
 		9F04A7231E38D1400043534A /* QRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F04A7221E38D1400043534A /* QRCodeController.swift */; };
@@ -379,8 +379,8 @@
 		149F9AEE1E72E29A00FB74AA /* Token.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Token.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E4D8CF1E72CB6E00389DF9 /* DevelopmentTokenURLPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevelopmentTokenURLPaths.swift; sourceTree = "<group>"; };
 		14E4D8D11E72CB7500389DF9 /* DistributionTokenURLPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistributionTokenURLPaths.swift; sourceTree = "<group>"; };
-		14ED3ABC1E4A2B3400DF8079 /* AppsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsController.swift; sourceTree = "<group>"; };
-		14ED3ABE1E4A347400DF8079 /* AppsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppsNavigationController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		14ED3ABC1E4A2B3400DF8079 /* BrowseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseController.swift; sourceTree = "<group>"; };
+		14ED3ABE1E4A347400DF8079 /* BrowseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = BrowseNavigationController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		21C18022E25A13D670BB406A /* Pods-CocoaPods-Distribution.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaPods-Distribution.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaPods-Distribution/Pods-CocoaPods-Distribution.debug.xcconfig"; sourceTree = "<group>"; };
 		2D5CDC5628EC8E3A581DB43C /* libPods-CocoaPods-Distribution.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CocoaPods-Distribution.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3792EEE42F397342AA67CF7D /* Pods-CocoaPods-Development.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaPods-Development.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocoaPods-Development/Pods-CocoaPods-Development.debug.xcconfig"; sourceTree = "<group>"; };
@@ -649,20 +649,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		14ED3AB91E4A2A8D00DF8079 /* Apps */ = {
+		14ED3AB91E4A2A8D00DF8079 /* Browse */ = {
 			isa = PBXGroup;
 			children = (
 				14ED3ABA1E4A2A8D00DF8079 /* Controllers */,
 				14ED3ABB1E4A2A8D00DF8079 /* Views */,
 			);
+			name = Browse;
 			path = Apps;
 			sourceTree = "<group>";
 		};
 		14ED3ABA1E4A2A8D00DF8079 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				14ED3ABC1E4A2B3400DF8079 /* AppsController.swift */,
-				14ED3ABE1E4A347400DF8079 /* AppsNavigationController.swift */,
+				14ED3ABC1E4A2B3400DF8079 /* BrowseController.swift */,
+				14ED3ABE1E4A347400DF8079 /* BrowseNavigationController.swift */,
 				143586FF1E5C4CB4007A268A /* SearchResultsView.swift */,
 				1426D2411E7054AB0045EF09 /* AppController.swift */,
 			);
@@ -839,7 +840,7 @@
 		9F9238CD1E24F3DE004BEEE0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				14ED3AB91E4A2A8D00DF8079 /* Apps */,
+				14ED3AB91E4A2A8D00DF8079 /* Browse */,
 				9F844BD81E30DF3F001C5498 /* Contacts */,
 				147513621E49CA4500E44A62 /* Home */,
 				9FCDBAEF1E29063500A70E07 /* Messaging */,
@@ -1532,7 +1533,7 @@
 				149F9A691E72E29A00FB74AA /* SettingsCell.swift in Sources */,
 				149F9A6A1E72E29A00FB74AA /* Message.swift in Sources */,
 				A98A29D51E92384C003BBE8E /* RateUsersControllerTransition.swift in Sources */,
-				149F9A6B1E72E29A00FB74AA /* AppsController.swift in Sources */,
+				149F9A6B1E72E29A00FB74AA /* BrowseController.swift in Sources */,
 				149F9A6C1E72E29A00FB74AA /* TGBaseMessageCellLayout.swift in Sources */,
 				149F9A6D1E72E29A00FB74AA /* HomeNavigationController.swift in Sources */,
 				149F9A6E1E72E29A00FB74AA /* ReputationView.swift in Sources */,
@@ -1589,7 +1590,7 @@
 				9F5D639E1E9231BE00FED490 /* ActionableMessageCell.swift in Sources */,
 				9FF6AFA01E83DE04001B5907 /* AvatarImageView.swift in Sources */,
 				14A769E11E72EC70007B4C1A /* DistributionTokenURLPaths.swift in Sources */,
-				149F9A8E1E72E29A00FB74AA /* AppsNavigationController.swift in Sources */,
+				149F9A8E1E72E29A00FB74AA /* BrowseNavigationController.swift in Sources */,
 				149F9A8F1E72E29A00FB74AA /* TGDeliveryStatusView.swift in Sources */,
 				149F9A901E72E29A00FB74AA /* CryptoTools.m in Sources */,
 				149F9A921E72E29A00FB74AA /* ChatAPIClient.swift in Sources */,
@@ -1652,7 +1653,7 @@
 				A98A29D11E9237F1003BBE8E /* RateUsersControllerTransition.swift in Sources */,
 				9F7E5DA21E4C982300543296 /* Message.swift in Sources */,
 				A94BDE151E800EF800B2F0CF /* ConfirmationButton.swift in Sources */,
-				14ED3ABD1E4A2B3400DF8079 /* AppsController.swift in Sources */,
+				14ED3ABD1E4A2B3400DF8079 /* BrowseController.swift in Sources */,
 				9F40F3C61E59FE97007A7DE7 /* TGBaseMessageCellLayout.swift in Sources */,
 				1475136A1E49D41200E44A62 /* HomeNavigationController.swift in Sources */,
 				A9AC74111E78064500365029 /* TextLabel.swift in Sources */,
@@ -1702,7 +1703,7 @@
 				A9AC74081E77E37500365029 /* ActionButton.swift in Sources */,
 				9FAACCB31E30E1EE00FB871D /* ContactsNavigationController.swift in Sources */,
 				9FCDBAEA1E28FD5C00A70E07 /* Theme.swift in Sources */,
-				14ED3ABF1E4A347400DF8079 /* AppsNavigationController.swift in Sources */,
+				14ED3ABF1E4A347400DF8079 /* BrowseNavigationController.swift in Sources */,
 				9F40F3CA1E59FE97007A7DE7 /* TGDeliveryStatusView.swift in Sources */,
 				9F5D639D1E9231BE00FED490 /* ActionableMessageCell.swift in Sources */,
 				9FC72A3A1E25145D00EF1141 /* CryptoTools.m in Sources */,

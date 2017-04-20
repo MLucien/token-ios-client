@@ -16,7 +16,7 @@
 import UIKit
 import SweetUIKit
 
-class AppsController: UIViewController {
+class BrowseController: UIViewController {
     static let cellHeight = CGFloat(220)
     static let cellWidth = CGFloat(90)
 
@@ -41,7 +41,7 @@ class AppsController: UIViewController {
     lazy var recommendedCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: AppsController.cellWidth, height: AppsController.cellHeight)
+        layout.itemSize = CGSize(width: BrowseController.cellWidth, height: BrowseController.cellHeight)
         layout.sectionInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
         layout.minimumLineSpacing = 15
 
@@ -130,7 +130,7 @@ class AppsController: UIViewController {
         self.recommendedCollectionView.topAnchor.constraint(equalTo: self.recommendedTitleLabel.bottomAnchor, constant: 20).isActive = true
         self.recommendedCollectionView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         self.recommendedCollectionView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        self.recommendedCollectionView.heightAnchor.constraint(greaterThanOrEqualToConstant: AppsController.cellHeight).isActive = true
+        self.recommendedCollectionView.heightAnchor.constraint(greaterThanOrEqualToConstant: BrowseController.cellHeight).isActive = true
 
         separatorView.topAnchor.constraint(equalTo: self.recommendedCollectionView.bottomAnchor, constant: -15).isActive = true
         separatorView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 15).isActive = true
@@ -165,7 +165,7 @@ class AppsController: UIViewController {
     }
 }
 
-extension AppsController: UICollectionViewDataSource {
+extension BrowseController: UICollectionViewDataSource {
 
     func collectionView(_: UICollectionView, numberOfItemsInSection _: Int) -> Int {
         return self.recommendedApps.count
@@ -181,7 +181,7 @@ extension AppsController: UICollectionViewDataSource {
     }
 }
 
-extension AppsController: UICollectionViewDelegate {
+extension BrowseController: UICollectionViewDelegate {
 
     func collectionView(_: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let app = self.recommendedApps[indexPath.row]
@@ -190,7 +190,7 @@ extension AppsController: UICollectionViewDelegate {
     }
 }
 
-extension AppsController: UISearchBarDelegate {
+extension BrowseController: UISearchBarDelegate {
 
     func searchBar(_: UISearchBar, textDidChange searchText: String) {
         if searchText.length == 0 {
@@ -204,14 +204,14 @@ extension AppsController: UISearchBarDelegate {
     }
 }
 
-extension AppsController: UISearchControllerDelegate {
+extension BrowseController: UISearchControllerDelegate {
 
     func didDismissSearchController(_: UISearchController) {
         self.showSearchResultsView(shouldShow: false)
     }
 }
 
-extension AppsController: SearchResultsViewDelegate {
+extension BrowseController: SearchResultsViewDelegate {
 
     func searchResultsView(_: SearchResultsView, didTapApp app: TokenContact) {
         let appController = AppController(app: app)

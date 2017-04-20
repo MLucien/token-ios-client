@@ -15,7 +15,7 @@
 
 import UIKit
 
-public class AppsNavigationController: UINavigationController {
+public class BrowseNavigationController: UINavigationController {
 
     public override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent

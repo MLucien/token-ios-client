@@ -60,7 +60,7 @@ open class TabBarController: UITabBarController {
     }()
 
 
-    internal var browseController: AppsNavigationController!
+    internal var browseController: BrowseNavigationController!
     internal var messagingController: MessagingNavigationController!
 //    internal var appsController: AppsNavigationController!
     internal var contactsController: ContactsNavigationController!
@@ -80,9 +80,9 @@ open class TabBarController: UITabBarController {
         super.viewDidLoad()
 
         // TODO: Refactor all this navigation controllers subclasses into one, they have similar code
-        self.browseController = AppsNavigationController(rootViewController: AppsController()) // HomeNavigationController(rootViewController: HomeController())
+        self.browseController = BrowseNavigationController(rootViewController: BrowseController())
         self.messagingController = MessagingNavigationController(rootViewController: ChatsController(idAPIClient: self.idAPIClient, chatAPIClient: self.chatAPIClient))
-//        self.appsController = AppsNavigationController(rootViewController: AppsController())
+
         self.contactsController = ContactsNavigationController(rootViewController: ContactsController(idAPIClient: self.idAPIClient, chatAPIClient: self.chatAPIClient))
         self.settingsController = SettingsNavigationController(rootViewController: SettingsController(idAPIClient: self.idAPIClient, chatAPIClient: self.chatAPIClient))
 
