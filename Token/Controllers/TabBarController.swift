@@ -53,17 +53,10 @@ open class TabBarController: UITabBarController {
         return controller
     }()
 
-    internal lazy var scanContactButton: UIBarButtonItem = {
-        let item = UIBarButtonItem(barButtonSystemItem: .camera, target: self, action: #selector(didTapScanContactButton))
-
-        return item
-    }()
-
 
     internal var browseController: BrowseNavigationController!
     internal var messagingController: ChatsNavigationController!
-//    internal var appsController: AppsNavigationController!
-    internal var contactsController: ContactsNavigationController!
+    internal var favoritesController: FavoritesNavigationController!
     internal var settingsController: SettingsNavigationController!
 
     public init() {
@@ -83,14 +76,14 @@ open class TabBarController: UITabBarController {
         self.browseController = BrowseNavigationController(rootViewController: BrowseController())
         self.messagingController = ChatsNavigationController(rootViewController: ChatsController(idAPIClient: self.idAPIClient, chatAPIClient: self.chatAPIClient))
 
-        self.contactsController = ContactsNavigationController(rootViewController: ContactsController(idAPIClient: self.idAPIClient, chatAPIClient: self.chatAPIClient))
+        self.favoritesController = FavoritesNavigationController(rootViewController: FavoritesController(idAPIClient: self.idAPIClient, chatAPIClient: self.chatAPIClient))
         self.settingsController = SettingsNavigationController(rootViewController: SettingsController(idAPIClient: self.idAPIClient, chatAPIClient: self.chatAPIClient))
 
         self.viewControllers = [
             self.browseController,
             self.messagingController,
             self.placeholderScannerController,
-            self.contactsController,
+            self.favoritesController,
             self.settingsController,
         ]
 
@@ -123,14 +116,6 @@ open class TabBarController: UITabBarController {
         case .me:
             self.selectedIndex = 4
         }
-    }
-
-    func didTapScanContactButton() {
-        /*
-         _ = self.scannerController.view
-         self.scannerController.toolbar.setItems([self.scannerController.cancelItem], animated: true)
-         self.present(self.scannerController, animated: true)
-         */
     }
 }
 
@@ -177,9 +162,9 @@ extension TabBarController: ScannerViewControllerDelegate {
             SoundPlayer.playSound(type: .scanned)
 
             self.dismiss(animated: true) {
+                self.switch(to: .favorites)
                 let contactController = ContactController(contact: contact, idAPIClient: self.idAPIClient)
-
-                self.navigationController?.pushViewController(contactController, animated: true)
+                self.favoritesController.pushViewController(contactController, animated: true)
             }
         }
     }

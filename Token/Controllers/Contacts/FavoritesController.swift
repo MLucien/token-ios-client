@@ -24,7 +24,7 @@ public extension Array {
     }
 }
 
-open class ContactsController: SweetTableController {
+open class FavoritesController: SweetTableController {
 
     let selectedContactKey = "SelectedContact"
 
@@ -272,7 +272,7 @@ open class ContactsController: SweetTableController {
     }
 }
 
-extension ContactsController: UITableViewDataSource {
+extension FavoritesController: UITableViewDataSource {
 
     open func numberOfSections(in _: UITableView) -> Int {
         if self.searchController.isActive {
@@ -303,7 +303,7 @@ extension ContactsController: UITableViewDataSource {
     }
 }
 
-extension ContactsController: UITableViewDelegate {
+extension FavoritesController: UITableViewDelegate {
 
     public func tableView(_: UITableView, heightForRowAt _: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
@@ -330,7 +330,7 @@ extension ContactsController: UITableViewDelegate {
     }
 }
 
-extension ContactsController: UISearchBarDelegate {
+extension FavoritesController: UISearchBarDelegate {
 
     public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = nil
@@ -338,7 +338,7 @@ extension ContactsController: UISearchBarDelegate {
     }
 }
 
-extension ContactsController: UISearchResultsUpdating {
+extension FavoritesController: UISearchResultsUpdating {
 
     public func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else { return }

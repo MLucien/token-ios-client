@@ -45,7 +45,7 @@
 		149F9A761E72E29A00FB74AA /* ContactsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FC72A431E252CFA00EF1141 /* ContactsManager.m */; };
 		149F9A771E72E29A00FB74AA /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A95D5D1E6F1114002762DA /* BaseCell.swift */; };
 		149F9A791E72E29A00FB74AA /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426D2411E7054AB0045EF09 /* AppController.swift */; };
-		149F9A7A1E72E29A00FB74AA /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBAE01E28E71900A70E07 /* ContactsController.swift */; };
+		149F9A7A1E72E29A00FB74AA /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBAE01E28E71900A70E07 /* FavoritesController.swift */; };
 		149F9A7B1E72E29A00FB74AA /* ChatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F844BD41E30D880001C5498 /* ChatsController.swift */; };
 		149F9A7C1E72E29A00FB74AA /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147513651E49CA5B00E44A62 /* HomeController.swift */; };
 		149F9A7D1E72E29A00FB74AA /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A95D541E6EF092002762DA /* SettingsController.swift */; };
@@ -63,7 +63,7 @@
 		149F9A891E72E29A00FB74AA /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA12BF11E65D135003705F6 /* SoundPlayer.swift */; };
 		149F9A8A1E72E29A00FB74AA /* ControlsCollectionViewDelegateDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDB3B1A1E6D649A00EE5FD7 /* ControlsCollectionViewDelegateDatasource.swift */; };
 		149F9A8B1E72E29A00FB74AA /* SearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143586FF1E5C4CB4007A268A /* SearchResultsView.swift */; };
-		149F9A8C1E72E29A00FB74AA /* ContactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAACCB21E30E1EE00FB871D /* ContactsNavigationController.swift */; };
+		149F9A8C1E72E29A00FB74AA /* FavoritesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAACCB21E30E1EE00FB871D /* FavoritesNavigationController.swift */; };
 		149F9A8D1E72E29A00FB74AA /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBAE91E28FD5C00A70E07 /* Theme.swift */; };
 		149F9A8E1E72E29A00FB74AA /* BrowseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED3ABE1E4A347400DF8079 /* BrowseNavigationController.swift */; };
 		149F9A8F1E72E29A00FB74AA /* TGDeliveryStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F40F3BE1E59FE97007A7DE7 /* TGDeliveryStatusView.swift */; };
@@ -215,7 +215,7 @@
 		9FA12BF01E65D043003705F6 /* messageSent.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9FA12BEF1E65D043003705F6 /* messageSent.m4a */; };
 		9FA12BF21E65D135003705F6 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA12BF11E65D135003705F6 /* SoundPlayer.swift */; };
 		9FA12BF41E66CA42003705F6 /* messageReceived.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 9FA12BF31E66CA42003705F6 /* messageReceived.m4a */; };
-		9FAACCB31E30E1EE00FB871D /* ContactsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAACCB21E30E1EE00FB871D /* ContactsNavigationController.swift */; };
+		9FAACCB31E30E1EE00FB871D /* FavoritesNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAACCB21E30E1EE00FB871D /* FavoritesNavigationController.swift */; };
 		9FAACCB51E30F24100FB871D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9FAACCB41E30F24100FB871D /* Localizable.strings */; };
 		9FAACCD71E310C1100FB871D /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAACCD61E310C1100FB871D /* SettingsNavigationController.swift */; };
 		9FAACCF11E31120600FB871D /* SF-UI-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FAACCD91E31120600FB871D /* SF-UI-Display-Black.otf */; };
@@ -264,7 +264,7 @@
 		9FCDBAD91E28D7D800A70E07 /* idAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBAD81E28D7D800A70E07 /* idAPIClient.swift */; };
 		9FCDBADD1E28E57100A70E07 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBADC1E28E57100A70E07 /* User.swift */; };
 		9FCDBADF1E28E6DC00A70E07 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBADE1E28E6DC00A70E07 /* TabBarController.swift */; };
-		9FCDBAE31E28E71900A70E07 /* ContactsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBAE01E28E71900A70E07 /* ContactsController.swift */; };
+		9FCDBAE31E28E71900A70E07 /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBAE01E28E71900A70E07 /* FavoritesController.swift */; };
 		9FCDBAE51E28E71900A70E07 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBAE21E28E71900A70E07 /* ProfileController.swift */; };
 		9FCDBAEA1E28FD5C00A70E07 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBAE91E28FD5C00A70E07 /* Theme.swift */; };
 		9FCDBAF51E2CDDB100A70E07 /* TokenContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBAF41E2CDDB100A70E07 /* TokenContact.swift */; };
@@ -448,7 +448,7 @@
 		9FA12BEF1E65D043003705F6 /* messageSent.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = messageSent.m4a; sourceTree = "<group>"; };
 		9FA12BF11E65D135003705F6 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		9FA12BF31E66CA42003705F6 /* messageReceived.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = messageReceived.m4a; sourceTree = "<group>"; };
-		9FAACCB21E30E1EE00FB871D /* ContactsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ContactsNavigationController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		9FAACCB21E30E1EE00FB871D /* FavoritesNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FavoritesNavigationController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9FAACCB41E30F24100FB871D /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		9FAACCD61E310C1100FB871D /* SettingsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SettingsNavigationController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9FAACCD91E31120600FB871D /* SF-UI-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Display-Black.otf"; sourceTree = "<group>"; };
@@ -491,7 +491,7 @@
 		9FCDBAD81E28D7D800A70E07 /* idAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = idAPIClient.swift; sourceTree = "<group>"; };
 		9FCDBADC1E28E57100A70E07 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9FCDBADE1E28E6DC00A70E07 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		9FCDBAE01E28E71900A70E07 /* ContactsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsController.swift; sourceTree = "<group>"; };
+		9FCDBAE01E28E71900A70E07 /* FavoritesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
 		9FCDBAE21E28E71900A70E07 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		9FCDBAE91E28FD5C00A70E07 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		9FCDBAF41E2CDDB100A70E07 /* TokenContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenContact.swift; sourceTree = "<group>"; };
@@ -761,13 +761,14 @@
 			name = Layouts;
 			sourceTree = "<group>";
 		};
-		9F844BD81E30DF3F001C5498 /* Contacts */ = {
+		9F844BD81E30DF3F001C5498 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
-				9FAACCB21E30E1EE00FB871D /* ContactsNavigationController.swift */,
-				9FCDBAE01E28E71900A70E07 /* ContactsController.swift */,
+				9FAACCB21E30E1EE00FB871D /* FavoritesNavigationController.swift */,
+				9FCDBAE01E28E71900A70E07 /* FavoritesController.swift */,
 				9F844BD91E30DF48001C5498 /* ContactController.swift */,
 			);
+			name = Favorites;
 			path = Contacts;
 			sourceTree = "<group>";
 		};
@@ -843,7 +844,7 @@
 			isa = PBXGroup;
 			children = (
 				14ED3AB91E4A2A8D00DF8079 /* Browse */,
-				9F844BD81E30DF3F001C5498 /* Contacts */,
+				9F844BD81E30DF3F001C5498 /* Favorites */,
 				147513621E49CA4500E44A62 /* Home */,
 				9FCDBAEF1E29063500A70E07 /* Messaging */,
 				9FCF132B1E531B380078FF7F /* Payments */,
@@ -1553,7 +1554,7 @@
 				149F9A761E72E29A00FB74AA /* ContactsManager.m in Sources */,
 				149F9A771E72E29A00FB74AA /* BaseCell.swift in Sources */,
 				149F9A791E72E29A00FB74AA /* AppController.swift in Sources */,
-				149F9A7A1E72E29A00FB74AA /* ContactsController.swift in Sources */,
+				149F9A7A1E72E29A00FB74AA /* FavoritesController.swift in Sources */,
 				149F9A7B1E72E29A00FB74AA /* ChatsController.swift in Sources */,
 				149F9A7C1E72E29A00FB74AA /* HomeController.swift in Sources */,
 				1437EC141E72F2CD00CE7A1F /* SettingsSectionHeader.swift in Sources */,
@@ -1583,7 +1584,7 @@
 				9F5D63A61E92331800FED490 /* ImageMessageCellLayout.swift in Sources */,
 				9FF6AF991E83CA84001B5907 /* UICollectionViewRightAlignedLayout.m in Sources */,
 				149F9A8B1E72E29A00FB74AA /* SearchResultsView.swift in Sources */,
-				149F9A8C1E72E29A00FB74AA /* ContactsNavigationController.swift in Sources */,
+				149F9A8C1E72E29A00FB74AA /* FavoritesNavigationController.swift in Sources */,
 				A9BF33B31E76F8D0009A51AA /* BackupPhraseEnableController.swift in Sources */,
 				149F9A8D1E72E29A00FB74AA /* Theme.swift in Sources */,
 				A9ED6CD11E83CD8400160637 /* Footnote.swift in Sources */,
@@ -1672,7 +1673,7 @@
 				E1A95D5E1E6F1114002762DA /* BaseCell.swift in Sources */,
 				A921D3631E7C145E00EE3221 /* Collection+Additions.swift in Sources */,
 				1426D2421E7054AB0045EF09 /* AppController.swift in Sources */,
-				9FCDBAE31E28E71900A70E07 /* ContactsController.swift in Sources */,
+				9FCDBAE31E28E71900A70E07 /* FavoritesController.swift in Sources */,
 				9F844BD51E30D880001C5498 /* ChatsController.swift in Sources */,
 				A9BF33B11E76DF67009A51AA /* BackupPhraseVerifyController.swift in Sources */,
 				9F54A7231E951F1500FEB67B /* RatingsClient.swift in Sources */,
@@ -1701,7 +1702,7 @@
 				9F5D63A51E92331800FED490 /* ImageMessageCellLayout.swift in Sources */,
 				A9AC74141E78231A00365029 /* BackupPhraseView.swift in Sources */,
 				A9AC74081E77E37500365029 /* ActionButton.swift in Sources */,
-				9FAACCB31E30E1EE00FB871D /* ContactsNavigationController.swift in Sources */,
+				9FAACCB31E30E1EE00FB871D /* FavoritesNavigationController.swift in Sources */,
 				9FCDBAEA1E28FD5C00A70E07 /* Theme.swift in Sources */,
 				14ED3ABF1E4A347400DF8079 /* BrowseNavigationController.swift in Sources */,
 				9F40F3CA1E59FE97007A7DE7 /* TGDeliveryStatusView.swift in Sources */,

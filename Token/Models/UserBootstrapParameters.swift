@@ -18,7 +18,9 @@ import SweetFoundation
 
 /// Prepares user keys and data, signs and formats it properly as JSON to bootstrap a chat user.
 public class UserBootstrapParameter {
-    private lazy var DeviceSpecificPassword: String = {
+
+    // This change might require re-creating Signal users
+    public lazy var password: String = {
         let deviceSpecificPasswordKey = "DeviceSpecificPassword"
         let uuid: String
 
@@ -35,8 +37,6 @@ public class UserBootstrapParameter {
     public let identityKey: String
 
     public let lastResortPreKey: PreKeyRecord
-
-    public let password: String
 
     public let prekeys: [PreKeyRecord]
 
@@ -87,7 +87,6 @@ public class UserBootstrapParameter {
 
         self.identityKey = ((storageManager.identityKeyPair().publicKey() as NSData).prependKeyType() as Data).base64EncodedString()
         self.lastResortPreKey = storageManager.getOrGenerateLastResortKey()
-        self.password = DeviceSpecificPassword
         self.prekeys = storageManager.generatePreKeyRecords() as! [PreKeyRecord]
 
         self.registrationId = TSAccountManager.getOrGenerateRegistrationId()
