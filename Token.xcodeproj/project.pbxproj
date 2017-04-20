@@ -17,10 +17,6 @@
 		145666041E30D24C00E52027 /* ChatsFloatingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145666031E30D24C00E52027 /* ChatsFloatingHeaderView.swift */; };
 		145666061E30D31A00E52027 /* EthereumAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145666051E30D31A00E52027 /* EthereumAPIClient.swift */; };
 		146D564C1E4A77F200FE7944 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D564B1E4A77F200FE7944 /* AppCell.swift */; };
-		147513661E49CA5B00E44A62 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147513651E49CA5B00E44A62 /* HomeController.swift */; };
-		147513681E49CA6F00E44A62 /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147513671E49CA6F00E44A62 /* HomeItemCell.swift */; };
-		1475136A1E49D41200E44A62 /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147513691E49D41200E44A62 /* HomeNavigationController.swift */; };
-		1475136C1E49F3A700E44A62 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1475136B1E49F3A700E44A62 /* HomeHeaderView.swift */; };
 		149F9A611E72E29A00FB74AA /* PaymentSendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F21E0651E546C4E000E90C6 /* PaymentSendController.swift */; };
 		149F9A621E72E29A00FB74AA /* ProfileEditController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE18B2A1E2D1FD300940DC8 /* ProfileEditController.swift */; };
 		149F9A631E72E29A00FB74AA /* SignalNotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2433D31E5F46F6003D95A1 /* SignalNotificationHandler.swift */; };
@@ -33,7 +29,6 @@
 		149F9A6A1E72E29A00FB74AA /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7E5DA11E4C982300543296 /* Message.swift */; };
 		149F9A6B1E72E29A00FB74AA /* BrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ED3ABC1E4A2B3400DF8079 /* BrowseController.swift */; };
 		149F9A6C1E72E29A00FB74AA /* TGBaseMessageCellLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F40F3BC1E59FE97007A7DE7 /* TGBaseMessageCellLayout.swift */; };
-		149F9A6D1E72E29A00FB74AA /* HomeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147513691E49D41200E44A62 /* HomeNavigationController.swift */; };
 		149F9A6E1E72E29A00FB74AA /* ReputationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140041891E71588A00C1FD87 /* ReputationView.swift */; };
 		149F9A6F1E72E29A00FB74AA /* Yap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBAD31E27DE8800A70E07 /* Yap.swift */; };
 		149F9A701E72E29A00FB74AA /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F844BD91E30DF48001C5498 /* ContactController.swift */; };
@@ -47,7 +42,6 @@
 		149F9A791E72E29A00FB74AA /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426D2411E7054AB0045EF09 /* AppController.swift */; };
 		149F9A7A1E72E29A00FB74AA /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBAE01E28E71900A70E07 /* FavoritesController.swift */; };
 		149F9A7B1E72E29A00FB74AA /* ChatsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F844BD41E30D880001C5498 /* ChatsController.swift */; };
-		149F9A7C1E72E29A00FB74AA /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147513651E49CA5B00E44A62 /* HomeController.swift */; };
 		149F9A7D1E72E29A00FB74AA /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A95D541E6EF092002762DA /* SettingsController.swift */; };
 		149F9A7E1E72E29A00FB74AA /* NSData+ows_StripToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB8C8A1E6832120088D5A6 /* NSData+ows_StripToken.m */; };
 		149F9A7F1E72E29A00FB74AA /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCDBAE21E28E71900A70E07 /* ProfileController.swift */; };
@@ -92,8 +86,6 @@
 		149F9AA71E72E29A00FB74AA /* NSDecimalNumber+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FAE4A6A1E4CBFC400126217 /* NSDecimalNumber+Additions.swift */; };
 		149F9AA81E72E29A00FB74AA /* TGBaseMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F40F3BB1E59FE97007A7DE7 /* TGBaseMessageCell.swift */; };
 		149F9AA91E72E29A00FB74AA /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146D564B1E4A77F200FE7944 /* AppCell.swift */; };
-		149F9AAA1E72E29A00FB74AA /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1475136B1E49F3A700E44A62 /* HomeHeaderView.swift */; };
-		149F9AAB1E72E29A00FB74AA /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 147513671E49CA6F00E44A62 /* HomeItemCell.swift */; };
 		149F9AAC1E72E29A00FB74AA /* AppsAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143186B81E49C4EA0025E9B7 /* AppsAPIClient.swift */; };
 		149F9AAD1E72E29A00FB74AA /* QRCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F04A7221E38D1400043534A /* QRCodeController.swift */; };
 		149F9AAE1E72E29A00FB74AA /* PaymentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F21E0621E546A03000E90C6 /* PaymentController.swift */; };
@@ -372,10 +364,6 @@
 		145666031E30D24C00E52027 /* ChatsFloatingHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatsFloatingHeaderView.swift; sourceTree = "<group>"; };
 		145666051E30D31A00E52027 /* EthereumAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EthereumAPIClient.swift; sourceTree = "<group>"; };
 		146D564B1E4A77F200FE7944 /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
-		147513651E49CA5B00E44A62 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		147513671E49CA6F00E44A62 /* HomeItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
-		147513691E49D41200E44A62 /* HomeNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = HomeNavigationController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		1475136B1E49F3A700E44A62 /* HomeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		149F9AEE1E72E29A00FB74AA /* Token.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Token.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E4D8CF1E72CB6E00389DF9 /* DevelopmentTokenURLPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevelopmentTokenURLPaths.swift; sourceTree = "<group>"; };
 		14E4D8D11E72CB7500389DF9 /* DistributionTokenURLPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistributionTokenURLPaths.swift; sourceTree = "<group>"; };
@@ -622,33 +610,6 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		147513621E49CA4500E44A62 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				147513631E49CA5300E44A62 /* Controllers */,
-				147513641E49CA5300E44A62 /* Views */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		147513631E49CA5300E44A62 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				147513691E49D41200E44A62 /* HomeNavigationController.swift */,
-				147513651E49CA5B00E44A62 /* HomeController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		147513641E49CA5300E44A62 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				147513671E49CA6F00E44A62 /* HomeItemCell.swift */,
-				1475136B1E49F3A700E44A62 /* HomeHeaderView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		14ED3AB91E4A2A8D00DF8079 /* Browse */ = {
 			isa = PBXGroup;
 			children = (
@@ -845,7 +806,6 @@
 			children = (
 				14ED3AB91E4A2A8D00DF8079 /* Browse */,
 				9F844BD81E30DF3F001C5498 /* Favorites */,
-				147513621E49CA4500E44A62 /* Home */,
 				9FCDBAEF1E29063500A70E07 /* Messaging */,
 				9FCF132B1E531B380078FF7F /* Payments */,
 				A98A29CD1E923784003BBE8E /* Rate Users */,
@@ -1536,7 +1496,6 @@
 				A98A29D51E92384C003BBE8E /* RateUsersControllerTransition.swift in Sources */,
 				149F9A6B1E72E29A00FB74AA /* BrowseController.swift in Sources */,
 				149F9A6C1E72E29A00FB74AA /* TGBaseMessageCellLayout.swift in Sources */,
-				149F9A6D1E72E29A00FB74AA /* HomeNavigationController.swift in Sources */,
 				149F9A6E1E72E29A00FB74AA /* ReputationView.swift in Sources */,
 				149F9A6F1E72E29A00FB74AA /* Yap.swift in Sources */,
 				149F9A701E72E29A00FB74AA /* ContactController.swift in Sources */,
@@ -1556,7 +1515,6 @@
 				149F9A791E72E29A00FB74AA /* AppController.swift in Sources */,
 				149F9A7A1E72E29A00FB74AA /* FavoritesController.swift in Sources */,
 				149F9A7B1E72E29A00FB74AA /* ChatsController.swift in Sources */,
-				149F9A7C1E72E29A00FB74AA /* HomeController.swift in Sources */,
 				1437EC141E72F2CD00CE7A1F /* SettingsSectionHeader.swift in Sources */,
 				9F54A7241E951F1500FEB67B /* RatingsClient.swift in Sources */,
 				9FF6AFA11E83E237001B5907 /* ConfirmationButton.swift in Sources */,
@@ -1627,8 +1585,6 @@
 				149F9AA81E72E29A00FB74AA /* TGBaseMessageCell.swift in Sources */,
 				A9AC74121E78064500365029 /* TextLabel.swift in Sources */,
 				149F9AA91E72E29A00FB74AA /* AppCell.swift in Sources */,
-				149F9AAA1E72E29A00FB74AA /* HomeHeaderView.swift in Sources */,
-				149F9AAB1E72E29A00FB74AA /* HomeItemCell.swift in Sources */,
 				149F9AAC1E72E29A00FB74AA /* AppsAPIClient.swift in Sources */,
 				149F9AAD1E72E29A00FB74AA /* QRCodeController.swift in Sources */,
 				149F9AAE1E72E29A00FB74AA /* PaymentController.swift in Sources */,
@@ -1656,7 +1612,6 @@
 				A94BDE151E800EF800B2F0CF /* ConfirmationButton.swift in Sources */,
 				14ED3ABD1E4A2B3400DF8079 /* BrowseController.swift in Sources */,
 				9F40F3C61E59FE97007A7DE7 /* TGBaseMessageCellLayout.swift in Sources */,
-				1475136A1E49D41200E44A62 /* HomeNavigationController.swift in Sources */,
 				A9AC74111E78064500365029 /* TextLabel.swift in Sources */,
 				1400418A1E71588A00C1FD87 /* ReputationView.swift in Sources */,
 				9FCDBAD41E27DE8800A70E07 /* Yap.swift in Sources */,
@@ -1677,7 +1632,6 @@
 				9F844BD51E30D880001C5498 /* ChatsController.swift in Sources */,
 				A9BF33B11E76DF67009A51AA /* BackupPhraseVerifyController.swift in Sources */,
 				9F54A7231E951F1500FEB67B /* RatingsClient.swift in Sources */,
-				147513661E49CA5B00E44A62 /* HomeController.swift in Sources */,
 				A9F61F7F1E72E22900D892E5 /* SettingsSectionHeader.swift in Sources */,
 				E1A95D551E6EF092002762DA /* SettingsController.swift in Sources */,
 				9FEB8C8B1E6832120088D5A6 /* NSData+ows_StripToken.m in Sources */,
@@ -1744,8 +1698,6 @@
 				9FAE4A6B1E4CBFC400126217 /* NSDecimalNumber+Additions.swift in Sources */,
 				9F40F3C41E59FE97007A7DE7 /* TGBaseMessageCell.swift in Sources */,
 				146D564C1E4A77F200FE7944 /* AppCell.swift in Sources */,
-				1475136C1E49F3A700E44A62 /* HomeHeaderView.swift in Sources */,
-				147513681E49CA6F00E44A62 /* HomeItemCell.swift in Sources */,
 				143186B91E49C4EA0025E9B7 /* AppsAPIClient.swift in Sources */,
 				9F04A7231E38D1400043534A /* QRCodeController.swift in Sources */,
 				9F21E0631E546A03000E90C6 /* PaymentController.swift in Sources */,
