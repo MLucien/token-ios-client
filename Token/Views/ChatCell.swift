@@ -22,7 +22,7 @@ class ChatCell: UITableViewCell {
     var thread: TSThread? {
         didSet {
             // last visible message
-            if let message = self.thread?.visibleIncomingInteractions.last, let messageBody = message.body {
+            if let message = self.thread?.messages.last, let messageBody = message.body {
                 switch SofaType(sofa: messageBody) {
                 case .message:
                     self.lastMessageLabel.text = SofaMessage(content: messageBody).body

@@ -20,7 +20,7 @@
 
 @interface TSThread (Additions)
 
-@property (nonatomic, readonly) NSArray<TSIncomingMessage *> *visibleIncomingInteractions;
+@property (nonatomic, readonly) NSArray<TSMessage *> *messages;
 @property (nonatomic, copy) NSString *cachedContactIdentifier;
 
 @end
